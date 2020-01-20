@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>make user snippet code</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="../../sitejs/corejs1.js"></script>
+<script type="text/javascript" src="snippetMaker.js"></script>
+<link rel='stylesheet' type='text/css' href='../../sitecss/style1.css'>
+<style>
+</style>
+
+<script>
+// ------------------------- jQuery doc ready ---------------------
+$(document).ready( docReady ) ;
+
+</script>
+
+</head>
+<body>
+
+<div id="promptDiv">
+<span class="leftHdg">Snippet name</span>
+<input type="text" name="prefix" />
+<br>
+<span class="leftHdg">Text description</span>
+<input type="text" name="description" />
+<br>
+<span class="leftHdg">Snippet body code</span>
+<textarea name="bodyText" rows="10" cols="100">
+</textarea>
+
+<br>
+<span class="leftHdg">Snippet code</span>
+<textarea name="snippetCode" rows="10" cols="100">
+</textarea>
+
+<br>
+<button onclick="makeSnippet_click(this)">Make snippet</button>
+
+</div>
+</body>
+</html>
