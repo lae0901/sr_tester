@@ -1,6 +1,6 @@
 {
   "name": "sr_tester",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "publish module tester",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
@@ -8,6 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
+  "files": [
+    "lib /**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lae0901/sr_tester.git"
