@@ -1,0 +1,23 @@
+{
+  "name": "sr_tester",
+  "version": "1.0.0",
+  "description": "publish module tester",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lae0901/sr_tester.git"
+    },
+    
+  "keywords": [],
+  "author": "Stephen Richter",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/lae0901/sr_tester/issues"
+  },
+  "homepage": "https://github.com/lae0901/sr_tester#readme"
+}
