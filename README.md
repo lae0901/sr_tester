@@ -1,3 +1,3 @@
-# common typescript modules
-* rxp - regular expression constants
-* core.ts - contains series of string_ and scan_ functions.
+# tester repo
+# testing history
+* publish package to NPM does not include type declaration file.

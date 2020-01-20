@@ -1,6 +1,6 @@
 {
   "name": "sr_tester",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "publish module tester",
   "main": "index.js",
   "types": "index.d.ts",
