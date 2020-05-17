@@ -1,6 +1,6 @@
 {
   "name": "sr_tester",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "publish module tester",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
@@ -23,12 +23,13 @@
   },
   "homepage": "https://github.com/lae0901/sr_tester#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.25",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^14.0.1",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "ts-jest": "^24.3.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.9.2"
   }
 }
