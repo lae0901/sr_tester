@@ -3,6 +3,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+import { rxp, regex_exec } from './regex_core';
+
+export { rxp, regex_exec };
+
+
 
 // // ------------------------------- lines_findFirst ----------------------------
 // // return linn and coln of first occurance of findText in string array of lines.

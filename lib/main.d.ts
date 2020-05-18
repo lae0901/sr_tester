@@ -1,5 +1,7 @@
 /// <reference types="node" />
 import * as fs from 'fs';
+import { rxp, regex_exec } from './regex_core';
+export { rxp, regex_exec };
 export declare function array_front<T>(arr: T[]): T | null;
 export declare function dir_findFirstText(dirPath: string, findText: string): Promise<{
     foundFilePath: string;
@@ -79,4 +81,3 @@ export declare function string_startsWith(text: string, startText: string | stri
 export declare function string_substrLenient(str: string, fx: number, lx?: number): string;
 export declare function string_tail(str: string, num: number): string;
 export declare function string_wordBx(text: string, word: string, ix: number): number;
-export {};
