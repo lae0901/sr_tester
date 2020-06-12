@@ -1,8 +1,8 @@
 // src/main.ts
 
-import { path_getFileName, path_splitBaseName, as400_compile } from './browser-path';
+import { path_getFileName, path_splitBaseName, steve_compile } from './browser-path';
 
-export { path_getFileName, path_splitBaseName, as400_compile } ;
+export { path_getFileName, path_splitBaseName, steve_compile } ;
 
 // ------------------------- array_front -------------------------------------
 // return either null or the first item in the array.

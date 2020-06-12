@@ -38,8 +38,8 @@ export function path_splitBaseName( path: string ) : { coreName:string, extName:
 }
 
 
-// --------------------- as400_compile -----------------------
-export async function as400_compile(config: { CURLIB: string, LIBL: string },
+// --------------------- steve_compile -----------------------
+export async function steve_compile(config: { CURLIB: string, LIBL: string },
 	srcfName: string, srcfLib: string, srcmbr: string):
 	Promise<{ compMsg: string, compile: string[], joblog: string[] }>
 {
