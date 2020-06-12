@@ -24,12 +24,15 @@ export function path_splitBaseName( path: string ) : { coreName:string, extName:
 	const baseName = path_getFileName( path ) ;
 	let coreName = baseName ;
 	let extName = '' ;
-	let ix = baseName.length - 1 ;
-	while( ix >= 0)
+	let ix = baseName.length ;
+	while( ix > 0)
 	{
+		ix -= 1 ;
 		const ch1 = baseName.substr(ix,1) ;
 		if ( ch1 == '.')
 		{
+			const lx = ix - 1 ;
+			coreName = baseName.substr(0,lx) ;
 			extName = baseName.substr(ix) ;
 			break ;
 		}

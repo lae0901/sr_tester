@@ -1,6 +1,6 @@
 {
   "name": "sr_tester",
-  "version": "1.5.8",
+  "version": "1.5.10",
   "description": "publish module tester",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
