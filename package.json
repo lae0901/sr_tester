@@ -1,6 +1,6 @@
 {
   "name": "sr_tester",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "publish module tester",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
@@ -31,5 +31,8 @@
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }

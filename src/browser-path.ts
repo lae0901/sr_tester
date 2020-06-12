@@ -1,7 +1,8 @@
 
 // ------------------------- path_getFileName ------------------------
 
-import { scan_revCharEqAny } from "./main";
+import { object_toQueryString, scan_revCharEqAny, string_rtrim } from "./main";
+import axios from 'axios';
 
 // return the part of the path that follows the last "/" in the string.
 export function path_getFileName(path : string ) : string
@@ -34,4 +35,47 @@ export function path_splitBaseName( path: string ) : { coreName:string, extName:
 		}
 	}
 	return { coreName, extName } ;
+}
+
+
+// --------------------- as400_compile -----------------------
+export async function as400_compile(config: { CURLIB: string, LIBL: string },
+	srcfName: string, srcfLib: string, srcmbr: string):
+	Promise<{ compMsg: string, compile: string[], joblog: string[] }>
+{
+	const promise = new Promise<{ compMsg: string, compile: string[], joblog: string[] }>
+		(async (resolve, reject) =>
+		{
+			srcfName = srcfName || '';
+			srcfLib = srcfLib || '';
+			srcmbr = srcmbr || '';
+			const libl = string_rtrim(config.LIBL);
+			const curlib = config.CURLIB;
+			let compMsg = '';
+			let compile: string[] = [];
+			let joblog: string[] = [];
+
+			const url = 'http://173.54.20.170:10080/coder/common/json_getManyRows.php';
+			const params =
+			{
+				libl, proc: 'utl7960_compile',
+				outParm1: compMsg, parm2: srcfName,
+				parm3: srcfLib, parm4: srcmbr, parm5: curlib
+			}
+			const query = object_toQueryString(params);
+			const url_query = url + '?' + query;
+
+			const response = await axios({
+				method: 'get', url: url_query, responseType: 'json'
+			});
+
+			let data = await response.data;
+			let outSet = data.outSet;
+			compMsg = outSet.outParm1;
+			compile = data.set1 || [];
+			joblog = data.set2 || [];
+			resolve({ compMsg, compile, joblog });
+		});
+
+	return promise;
 }
