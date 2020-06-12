@@ -1,5 +1,5 @@
-import { path_getFileName } from './browser-path';
-export { path_getFileName };
+import { path_getFileName, path_splitBaseName } from './browser-path';
+export { path_getFileName, path_splitBaseName };
 export declare function array_front<T>(arr: T[]): T | null;
 export declare function lines_findFirst(lines: string[], findText: string, options?: {
     start?: number;
