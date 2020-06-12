@@ -31,8 +31,7 @@ export function path_splitBaseName( path: string ) : { coreName:string, extName:
 		const ch1 = baseName.substr(ix,1) ;
 		if ( ch1 == '.')
 		{
-			const lx = ix - 1 ;
-			coreName = baseName.substr(0,lx) ;
+			coreName = baseName.substr(0,ix) ;
 			extName = baseName.substr(ix) ;
 			break ;
 		}
