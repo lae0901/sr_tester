@@ -5,7 +5,7 @@
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./lib/tests/as400_tests.js",
     "build": "tsc"
   },
   "files": [
@@ -33,6 +33,7 @@
     "typescript": "^3.9.2"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "sr_core_ts": "^1.46.7"
   }
 }
